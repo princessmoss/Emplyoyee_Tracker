@@ -38,9 +38,9 @@ const initialAction = async () => {
             type: 'list',
             message: 'What would you like to do?',
             choices: [
-                'View Employees',
-                'View Departments',
-                'View Roles',
+                'View All Employees',
+                'View All Employees Departments',
+                'View All Employees Roles',
                 'Add Employees',
                 'Add Departments',
                 'Add Roles',
@@ -49,15 +49,15 @@ const initialAction = async () => {
             ]
         });
         switch (answer.action) {
-            case 'View Employees':
+            case 'View All Employees':
                 employeeView();
                 break;
 
-            case 'View Departments':
+            case 'View All Employees Departments':
                 departmentView();
                 break;
 
-            case 'View Roles':
+            case 'View All Employees Roles':
                 roleView();
                 break;
 
@@ -75,7 +75,7 @@ const initialAction = async () => {
 
             case 'Update Employee Role':
                 employeeUpdate();
-                break
+                break  
 
             case 'Exit':
                 connection.end();
@@ -326,3 +326,4 @@ const employeeUpdate = async () => {
         initialAction();
     };
 }
+
